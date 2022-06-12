@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="border: solid;border-collapse: collapse;">
+<% doc.forEach(function(d){ %>
+<tr>
+    <td style="border:solid"><%= d.ID %></td>
+    <td style="border:solid"><%= d.title %></td>
+</tr>
+    <% }); %>
+</table>
+<hr>
+<a href="/">back</a>
+</body>
+</html>

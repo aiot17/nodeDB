@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><form action="/addOne" method="post">
+        ID: <input type="text" name="insert"><br>
+        title: <input type="text" name="title"><br>
+        <input type="submit" value="新增"/>
+    </form>
+    <hr>
+    <form action="/delete" method="get">
+        ID: <input type="text" name="remove"><br>
+        <input type="submit" value="刪除"/>
+    </form>
+    <hr>
+    <hr>
+    <form action="/update" method="post">
+        ID: <input type="text" name="update"><br>
+        title: <input type="text" name="title"><br>
+        <input type="submit" value="更新"/>
+    </form>
+    <hr>
+    <hr>
+    <form action="/find_One" method="get">
+        ID: <input type="text" name="findOne"><br>
+        <input type="submit" value="查詢"/>
+    </form>
+    <hr>
+    <form action="/find_all" method="get">
+        <input type="text" name="findAll" hidden>
+        <input type="submit" value="總表"/>
+    </form></p>
+<hr>
+<% if(msg==null){ %>
+    <p><%= "" %></p>
+<% }else{ %>
+    <p><%= msg %></p>
+<% } %>
+</body>
+</html>
